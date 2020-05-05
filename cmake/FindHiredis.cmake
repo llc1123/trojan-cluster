@@ -18,7 +18,7 @@ find_path(
 set(HIREDIS_NAMES hiredis hiredis.h hiredis/hiredis.h)
 find_library(
     HIREDIS_LIBRARY
-    NAMES hiredis libhiredis
+    NAMES hiredis.a libhiredis.a
     DOC "hiredis library"
     PATHS /usr/lib /usr/local/lib
     PATH_SUFFIXES hiredis
