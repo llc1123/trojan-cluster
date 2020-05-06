@@ -1,5 +1,7 @@
 # trojan
 
+[![Build Status](https://dev.azure.com/kunagisamari/trojan-redis/_apis/build/status/DenrianWeiss.trojan-cluster?branchName=master)](https://dev.azure.com/kunagisamari/trojan-redis/_build/latest?definitionId=1&branchName=master)
+
 An unidentifiable mechanism that helps you bypass GFW.
 
 Trojan features multiple protocols over `TLS` to avoid both active/passive detections and ISP `QoS` limitations.
