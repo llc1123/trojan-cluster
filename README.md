@@ -1,6 +1,7 @@
 # trojan
 
 [![Build Status](https://dev.azure.com/kunagisamari/trojan-redis/_apis/build/status/DenrianWeiss.trojan-cluster?branchName=master)](https://dev.azure.com/kunagisamari/trojan-redis/_build/latest?definitionId=1&branchName=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDenrianWeiss%2Ftrojan-cluster.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FDenrianWeiss%2Ftrojan-cluster?ref=badge_shield)
 
 An unidentifiable mechanism that helps you bypass GFW.
 
@@ -31,3 +32,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## License
 
 [GPLv3](LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDenrianWeiss%2Ftrojan-cluster.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDenrianWeiss%2Ftrojan-cluster?ref=badge_large)
