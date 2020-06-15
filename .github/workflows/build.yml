@@ -1,0 +1,28 @@
+name: Build
+on: [push]
+
+jobs:
+  build:
+    name: Build Release
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y cmake build-essential libboost-system-dev libboost-program-options-dev libssl-dev libhiredis-dev
+      - name: CMake
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+      - name: Make
+        run: |
+          cd build
+          make -j8
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: release
+          path: build/trojan
