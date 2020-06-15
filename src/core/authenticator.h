@@ -20,9 +20,6 @@
 #ifndef _AUTHENTICATOR_H_
 #define _AUTHENTICATOR_H_
 
-#ifdef ENABLE_MYSQL
-#include <mysql.h>
-#endif // ENABLE_MYSQL
 #ifdef ENABLE_REDIS
 #include "RedisHelper.h"
 #endif // ENABLE_REDIS
@@ -30,9 +27,6 @@
 
 class Authenticator {
 private:
-#ifdef ENABLE_MYSQL
-    MYSQL con{};
-#endif // ENABLE_MYSQL
 #ifdef ENABLE_REDIS
     RedisHelper* redis = nullptr;
 #endif // ENABLE_REDIS

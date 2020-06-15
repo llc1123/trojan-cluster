@@ -23,9 +23,6 @@
 #include <boost/program_options.hpp>
 #include <boost/version.hpp>
 #include <openssl/opensslv.h>
-#ifdef ENABLE_MYSQL
-#include <mysql.h>
-#endif // ENABLE_MYSQL
 #include "core/service.h"
 #include "core/version.h"
 using namespace std;
@@ -89,11 +86,6 @@ int main(int argc, const char *argv[]) {
         }
         if (vm.count("version")) {
             Log::log(string("Boost ") + BOOST_LIB_VERSION + ", " + OpenSSL_version(OPENSSL_VERSION), Log::FATAL);
-#ifdef ENABLE_MYSQL
-            Log::log(string(" [Enabled] MySQL Support (") + mysql_get_client_info() + ')', Log::FATAL);
-#else // ENABLE_MYSQL
-            Log::log("[Disabled] MySQL Support", Log::FATAL);
-#endif // ENABLE_MYSQL
 #ifdef ENABLE_REDIS
             Log::log(" [Enabled] Redis Support");
 #else

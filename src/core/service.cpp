@@ -121,13 +121,7 @@ Service::Service(Config &config, bool test) :
         } else {
             ssl_context.use_tmp_dh_file(config.ssl.dhparam);
         }
-        if (config.mysql.enabled) {
-#ifdef ENABLE_MYSQL
-            auth = new Authenticator(config);
-#else // ENABLE_MYSQL
-            Log::log_with_date_time("MySQL is not supported", Log::WARN);
-#endif // ENABLE_MYSQL
-        } else if (config.redis.enabled) {
+        if (config.redis.enabled) {
 #ifdef ENABLE_REDIS
             auth = new Authenticator(config);
 #else

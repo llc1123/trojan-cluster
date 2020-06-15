@@ -71,16 +71,6 @@ public:
         bool fast_open;
         int fast_open_qlen;
     } tcp;
-    class MySQLConfig {
-    public:
-        bool enabled;
-        std::string server_addr;
-        uint16_t server_port;
-        std::string database;
-        std::string username;
-        std::string password;
-        std::string cafile;
-    } mysql;
     class RedisConfig {
     public:
         bool enabled;
