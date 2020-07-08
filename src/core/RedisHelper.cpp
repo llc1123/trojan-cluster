@@ -31,8 +31,9 @@ bool RedisHelper::exists(const std::string& key) {
     if (isRedisErrorNil(r)) {
         return false;
     } else {
+        auto rv = (0 != r->integer);
         freeReplyObject(r);
-        return 0 != r->integer;
+        return rv;
     }
 }
 
